@@ -1,7 +1,8 @@
 # A tutorial for identification of unique mutations of SARS-CoV-2 variants
 In order to establish a simple and accurate PCR based approach for determining the SARS-CoV-2 VOCs, we developed a pipeline to determine the unique mutations for SARS-CoV-2 variants.
 
-Author: Dongyan Xiong
+Author: Dongyan Xiong.
+
 Prof. Hongping Wei's Lab
 
 Here is the usage of the pipeline. All scripts are recommended to run on the Linux system.
