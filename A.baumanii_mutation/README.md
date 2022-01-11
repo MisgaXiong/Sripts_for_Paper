@@ -4,5 +4,5 @@
 
 ## Hongping Wei's Lab
 
-### Descriptio
+### Description
 These scripts were used to identify the mutation in A.baumanii. The input data are completed genomes for both original and evolved A.baumanii.
