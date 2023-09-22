@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Within host genetic polymorphism</title>
+		<link rel="stylesheet" href="../css/intra-host-diversity-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Omics Data Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="allele.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td colspan="2" style="padding-left:20px;font-size: 24px;">Intra-host variation identification</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">Identify the intra-host variations in the deep sequencing data</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R1 file</td>
+							<td>
+								<input class="cell2" required type="file" name="Fq1"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R2 file</td>
+							<td>
+								<input class="cell2" required type="file" name="Fq2"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Target isolate genome</td>
+							<td>
+								<input class="cell2" required type="file" name="isolate"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Reads alignment quality</td>
+							<td>
+								<select class="cell2" name="AliQ">
+									<option value="default">default</option>
+									<option value="medium">medium</option>
+									<option value="high">high</option>
+									<option value="strict">strict</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Minor allele frequency</td>
+							<td>
+								<input type="text" class="cell2" required placeholder="eg: 0.02" name="MuAF"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Sequencing depth</td>
+							<td>
+								<input type="text" class="cell2" required placeholder="eg: 100 (recommend: >= 100)" name="depth"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">GFF file (optional)</td>
+							<td>
+								<input type="file" class="cell2" name="GFF"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Translation code</td>
+							<td>
+								<select class="cell2" name="code">
+									<option value="1">standard</option>
+									<option value="11">bacteria or phage</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="isnv-calling"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The gff file is the optional gene annotation file to be uploaded, it can be downloaded from the public database or annotated by the genome function of PHDtools. The iSNV-calling can reveal the genetic diversity of the target pathogen within the host and infer its adaptive evolution.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
