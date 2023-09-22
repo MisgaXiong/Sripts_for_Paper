@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Pathogen X Identification</title>
+		<link rel="stylesheet" href="../css/microbiome-community-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Omics Data Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="pathogen-x.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td colspan="2" style="padding-left:20px;font-size: 24px;">Pathogen X identification</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">De novo identify and estimate the whole microbiota in mNGS data</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R1 file</td>
+							<td>
+								<input class="cell2" required type="file" name="Fq1"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R2 file</td>
+							<td>
+								<input class="cell2" required type="file" name="Fq2"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Background microbiota sequences</td>
+							<td>
+								<input class="cell2" type="file" name="bgm"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Contigs length to taxonomy</td>
+							<td>
+								<select class="cell2" name="ctglen">
+									<option value="200">default</option>
+									<option value="150">short (150bp)</option>
+									<option value="300">medium (300bp)</option>
+									<option value="1000">long (1000bp)</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Host selection</td>
+							<td>
+								<select class="cell2" name="host">
+									<option value="Human">Human</option>
+									<option value="Mouse">Mouse</option>
+									<option value="Pig">Pig</option>
+									<option value="Unknown">Unknown</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="analysis"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The background microbiota sequences are some certain microbial species that usually appear in the user's lab or abundant in the samples. These sequences has less meanings to research and instead increase the analysis time. It is an optional selection for users to remove these sequences.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
