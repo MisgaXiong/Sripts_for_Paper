@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Target pathogen genome assembly</title>
+		<link rel="stylesheet" href="../css/genome-assemble-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Omics Data Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="assemble.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td colspan="2" style="padding-left:20px;font-size: 24px;">Target genome assembly</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">De novo assembly the target pathogen genome using NGS data</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R1 file</td>
+							<td>
+								<input class="cell2" type="file" name="Fq1" required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R2 file</td>
+							<td>
+								<input class="cell2" type="file" name="Fq2" required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Target pathogen genomes set</td>
+							<td>
+								<input class="cell2" type="file" name="reference" required/><br/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Target pathogen taxnomy id</td>
+							<td>
+								<input class="cell2" type="text", name="taxid" placeholder="eg: 2697049 (optional)"/>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="assemble"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The taxnomy id is an optinal selection. If you want input the taxnomy id, please make sure the correct species level accession of the target pathogen is input. The correct taxnomy id of a certain pathogen could be searched in NCBI Taxnomy menu.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
