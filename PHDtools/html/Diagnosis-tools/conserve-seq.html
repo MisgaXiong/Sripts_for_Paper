@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Conserved sequence</title>
+		<link rel="stylesheet" href="../css/conserve-seq-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Molecular Diagnosis Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="conserve-seq.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td colspan="2" style="font-size: 24px; padding-left: 0">The most conserved sequence identification</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">Identify the most conserved region in the genome of a certain pathogen</td>
+						</tr>
+						<tr>
+							<td class="cell1">Pathogen genomes</td>
+							<td>
+								<input class="cell2" type="file" name="genomes" required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Reference genome</td>
+							<td>
+								<input class="cell2" type="file" name="reference" required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Length of excepted conserve sequence</td>
+							<td>
+								<input class="cell2" type="text" name="targetLen" placeholder="eg: 200 (100 ~ 1000bp)" required/><br/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Algorithm to identify the region</td>
+							<td>
+								<select class="cell2" name="algo">
+									<option value="max">mutation frequency</option>
+									<option value="shannon">mutation diversity</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Waiting model</td>
+							<td>
+								<select class="cell2" name="waiting">
+									<option value="asynchronous">Asynchronous</option>
+									<option value="simultaneous">Simultaneous</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="analysis"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The most conserved sequence identification is not only meaningful to nucleic acid testing (NAT), but also useful to confirm the conserved epitopes for vaccince development. If you choose the Asynchronous model, you can get a result download code and then close the window to wait the analysis. If you choose the other model, you have to keep waiting until the analysis finish.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
