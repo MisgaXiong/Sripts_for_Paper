@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>PCR Primer design</title>
+		<link rel="stylesheet" href="../css/primer-design-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Molecular Diagnosis Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="primer-design.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td style="font-size: 24px; padding-left: 20px;">PCR Primer design</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">Design the regular PCR primers/probe using a target sequence.</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div style="padding-left:40px;"><textarea required name="target" placeholder="Target sequences (fasta format, no more than 300bp)&#10Example:&#10>target_sequence&#10CTTACTGGAATAGATGAAGGGGACCAGCTTCGATCAGCTAGCT" style="width:500px;height:150px;resize:vertical;" maxlength="360" onchange="this.value=this.value.substring(0,360)" onkeydown="this.value=this.value.substring(0, 360)" onkeyup="this.value=this.value.substring(0, 360)"></textarea></div>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Conserve score file (optional)</td>
+							<td>
+								<input class="cell2" type="file" name="conserve"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Primer type</td>
+							<td>
+								<select class="cell2" name="type">
+									<option value="qPCR">qPCR</option>
+									<option value="nPCR">PCR</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="design"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">Primer design function can design the regular nucleic acid detection primers/probe for any pathogens. The conserve score file is an optional file that is specially used for the highly conserved primer/probes development for a certain pathogens. This file can be obtained by the Conserved Sequence Determine of PHDtools.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
