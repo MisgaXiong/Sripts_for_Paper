@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>WGS quality report</title>
+		<link rel="stylesheet" href="../css/sequencing-quality-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Omics Data Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="quality.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td colspan="2" style="padding-left:20px;font-size: 24px;">Sequencing quality report</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">Report the sequencing quality of your target pathogen in NGS data</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R1 file</td>
+							<td>
+								<input class="cell2" type="file" name="Fq1" required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">FASTQ R2 file</td>
+							<td>
+								<input class="cell2" type="file" name="Fq2" required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Target pathogen genome</td>
+							<td>
+								<input class="cell2" type="file" name="reference" required/><br/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Waiting model</td>
+							<td>
+								<select name="waiting" class="cell2">
+									<option value="asynchronous">Asynchronous
+									<option value="simultaneous">Simultaneous
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="report"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The sequencing quality analysis will report the coverage and depth of the target pathogen. If you choose the Asynchronous model, you can get a result download code and then close the window to wait the analysis. If you choose the other model, you have to keep waiting until the analysis finish.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
