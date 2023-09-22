@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Primers alignment</title>
+		<link rel="stylesheet" href="../css/mapping-primers-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Molecular Diagnosis Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="mapping-primers.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td colspan="2" style="font-size: 24px; padding-left: 20px;">Strain-level mapping primers</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">Identify the mismatches of primers against to each strain of a pathogen.</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div style="padding-left:40px;"><textarea required name="primers" placeholder="Primers-probe sequences (fasta format)&#10Example:&#10>forward&#10CTTACTGGAATAGATGAAGG (5' -> 3')&#10>reverse&#10CTGGAACATTGGATTTCTTC (5' -> 3')&#10>probe&#10CCGGACATGATGGTAAAGACCC (5' -> 3')" style="width:550px;height:150px;resize:vertical;"></textarea></div>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Pathogen genomes</td>
+							<td>
+								<input required class="cell2" type="file" name="genomes"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Amplicon sequence (optional)</td>
+							<td>
+								<input class="cell2" type="file" name="amplicon"/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Waiting model</td>
+							<td>
+								<select class="cell2" name="waiting">
+									<option value="asynchronous">Asynchronous</option>
+									<option value="simultaneous">Simultaneous</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="mapping"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The strain-level primers mapping can provide the useful information to evaluate the conservation of primers against to the pathogen. The name of primers/probe must be "forward", "reverse" or "probe". And the completed or nearly-full length genomes of each isolate of the certain pathogen must be in a fasta file.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
