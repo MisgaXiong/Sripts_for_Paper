@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Genome annotation</title>
+		<link rel="stylesheet" href="../css/genome-annotation-style.css"/>
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Omics Data Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center">
+				<form action="genome-annotation.php" method="POST" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td colspan="2" style="font-size: 24px; padding-left:30px;">Pathogen genome annotation</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px;">Annotate the functional genes in the pathogen genome</td>
+						</tr>
+						<tr>
+							<td class="cell1">Genome file</td>
+							<td>
+								<input class="cell2" type="file" name="genome" required/>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Kingdom choose of the pathogen</td>
+							<td>
+								<select class="cell2" name="kingdom">
+									<option value="Viruses">virus</option>
+									<option value="Bacteria">bacteria</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td class="cell1">Translation table</td>
+							<td>
+								<select class="cell2" name="codon">
+									<option value="1">default</option>
+									<option value="1">standard</option>
+									<option value="11">bacteria or plasmid</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td style="text-align:center;">
+								<input class="cell3" type="submit" value="annotation"/>
+							</td>
+							<td style="text-align:center;">
+								<input class="cell3" type="reset" value="cancel"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The genome annotation will predict the functional genes in the pathogen genome and output gene and protein sequences in a FASTA format. In addition, it will also output the GFF format annotation file for downstream analysis. The uploaded genome file must be FASTA format.</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</section>
+	</body>
+</html>
