@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Comparative genomics analysis</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/comparative-genomes-style.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Omics Data Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center" style="margin-left: 50px;width:700px;height:100%;float:left;">
+			<table style="width:100%;">
+				<tr>
+					<td colspan="2" style="font-size:23px;">Inter-host variation identification</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px; padding-top:25px;">Identify mutations, deletions and insertions against to the reference sequence.</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<section id="model-select">
+						<div class="model-header clearfix">
+							<a href="javaScript:;" class="current" style="width:25%;">Genome-vs-Genome</a>
+							<a href="javaScript:;" style="width:20%;">Gene-vs-Gene</a>
+							<a href="javaScript:;" style="width:25%;">Protein-vs-Protein</a>
+							<a href="javaScript:;" style="width:30%;">Genome-vs-Sequencing</a>
+						</div>
+						<div class="model-body">
+							<div class="model-menu" style="display:block;">
+								<form action="comparative-genomes.php" method="POST" enctype="multipart/form-data">
+									<table style="width:100%;height:350px;">
+										<tr>
+											<td class="cell1">Reference genome</td>
+											<td>
+												<input class="cell2" required type="file" name="reference"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Isolate genome</td>
+											<td>
+												<input class="cell2" type="file" name="isolate"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Comparative model</td>
+											<td>
+												<select class="cell2" name="datatype">
+													<option value="GmeVSGme">Genome vs Genome
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">GFF file (optional)</td>
+											<td>
+												<input class="cell2" type="file" name="gff"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Translation code</td>
+											<td>
+												<select class name="codon">
+													<option value="1">default</option>
+													<option value="1">standard</option>
+													<option value="11">bacteria or plasmid</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:center;">
+												<input class="cell3" type="submit" value="compare"/>
+											</td>
+											<td style="text-align:center;">
+												<input class="cell3" type="reset" value="cancel"/>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+							<div class="model-menu">
+								<form action="comparative-genomes.php" method="POST" enctype="multipart/form-data">
+									<table style="width:100%;height:300px;">
+										<tr>
+											<td class="cell1">Reference gene</td>
+											<td>
+												<input class="cell2" required type="file" name="reference"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Isolate gene</td>
+											<td>
+												<input class="cell2" type="file" name="isolate"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Comparative model</td>
+											<td>
+												<select class="cell2" name="datatype">
+													<option value="GneVSGne">Gene vs Gene
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Translation code</td>
+											<td>
+												<select class name="codon">
+													<option value="1">default</option>
+													<option value="1">standard</option>
+													<option value="11">bacteria or plasmid</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:center;">
+												<input class="cell3" type="submit" value="compare"/>
+											</td>
+											<td style="text-align:center;">
+												<input class="cell3" type="reset" value="cancel"/>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+							<div class="model-menu">
+								<form action="comparative-genomes.php" method="POST" enctype="multipart/form-data">
+									<table style="width:100%;height:250px;">
+										<tr>
+											<td class="cell1">Reference protein</td>
+											<td>
+												<input class="cell2" required type="file" name="reference"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Isolate protein</td>
+											<td>
+												<input class="cell2" type="file" name="isolate"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Comparative model</td>
+											<td>
+												<select class="cell2" name="datatype">
+													<option value="PrtVSPrt">Protein vs Protein
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:center;">
+												<input class="cell3" type="submit" value="compare"/>
+											</td>
+											<td style="text-align:center;">
+												<input class="cell3" type="reset" value="cancel"/>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+							<div class="model-menu">
+								<form action="comparative-genomes.php" method="POST" enctype="multipart/form-data">
+									<table style="width:100%;height:350px;">
+										<tr>
+											<td class="cell1">Reference sequence</td>
+											<td>
+												<input class="cell2" required type="file" name="reference"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">FASTQ R1 file</td>
+											<td>
+												<input class="cell2" type="file" name="Fq1"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">FASTQ R2 file</td>
+											<td>
+												<input class="cell2" type="file" name="Fq2"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Comparative model</td>
+											<td>
+												<select class="cell2" name="datatype">
+													<option value="GmeVSNGS">Genome vs NGS data
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">GFF file (optional)</td>
+											<td>
+												<input class="cell2" type="file" name="gff"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Translation code</td>
+											<td>
+												<select class name="codon">
+													<option value="1">default</option>
+													<option value="1">standard</option>
+													<option value="11">bacteria or plasmid</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:center;">
+												<input class="cell3" type="submit" value="compare"/>
+											</td>
+											<td style="text-align:center;">
+												<input class="cell3" type="reset" value="cancel"/>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+						</div>
+					</section>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">Four different models for inter-host variation identification. The reference/isolate sequence must be in FASTA format. In addition, the gff file is the optional gene annotation file to be uploaded, it can be downloaded from the public database or annotated by the genome function of PHDtools.</td>
+				</tr>
+			</table>
+			</div>
+		</section>
+		<script type="application/javascript" >
+			window.onload=function () {
+				let as=document.getElementsByClassName('model-header')[0].getElementsByTagName('a');
+				let contents=document.getElementsByClassName("model-menu");
+				for (let i=0;i<as.length;i++){
+					let a=as[i];
+					a.id=i;
+					a.onclick=function () {
+						for(let j=0;j<as.length;j++){
+							as[j].className="";
+							contents[j].style.display="none";
+						}
+						this.className='current';
+						contents[this.id].style.display='block';
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
