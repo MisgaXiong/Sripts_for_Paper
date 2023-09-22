@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Strain Typing</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="../css/strain-typing-style.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<a href="#" class="logo">PHDtools: Omics Data Analysis</a>
+			<ul class="nav">
+				<li><a href="../PHDtools-home.html">Back to home</a></li>
+				<li><a href="../PHDtools-team.html">Team</a></li>
+				<li><a href="#publication">Publications</a></li>
+			</ul>
+		</div>
+		<section id="all">
+			<div id="center" style="margin-left: 50px;width:700px;height:100%;float:left;">
+			<table style="width:100%;">
+				<tr>
+					<td colspan="2" style="font-size:23px;">Strain typing</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="font-size:15px; text-align:left; padding-left: 40px; padding-top:25px;">Using a phylogenetic tree to type the relationships among strain of a certain pathogen.</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<section id="model-select">
+						<div class="model-header clearfix">
+							<a href="javaScript:;" class="current" style="width:40%;">Typing RNA virus</a>
+							<a href="javaScript:;" style="width:60%;">Typing bacteria or DNA virus</a>
+						</div>
+						<div class="model-body">
+							<div class="model-menu" style="display:block;">
+								<form action="strain-typing.php" method="POST" enctype="multipart/form-data">
+									<table style="width:100%;height:250px;">
+										<tr>
+											<td class="cell1">Pathogen genomes for typing</td>
+											<td>
+												<input class="cell2" required type="file" name="small-genomes"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell4" border="1" colspan="2">The RNA virus such as SARS-CoV, Dengue can use this model to strain typing. In order to get a good result, only the complete or nearly full-length of the genome should be used. The genomes of the pathogen can be merged in one fasta file or in each single fasta file. Please use a .zip or .gz format file to package the fasta file(s).</td>
+										</tr>
+										<tr>
+											<td style="text-align:center;">
+												<input class="cell3" type="submit" value="typing"/>
+											</td>
+											<td style="text-align:center;">
+												<input class="cell3" type="reset" value="cancel"/>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+							<div class="model-menu">
+								<form action="strain-typing.php" method="POST" enctype="multipart/form-data">
+									<table style="width:100%;height:300px;">
+										<tr>
+											<td class="cell1">Pathogen genomes for typing</td>
+											<td>
+												<input class="cell2" required type="file" name="large-genomes"/>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Phylogenetic resolution (optional)</td>
+											<td>
+												<select class="cell2" name="resolution">
+													<option value="default">default</option>
+													<option value="low">low but rapid</option>
+													<option value="high">high but resource-costive</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell1">Translation code</td>
+											<td>
+												<select class="cell2" name="codon">
+													<option value="1">default</option>
+													<option value="1">strand (most viruses)</option>
+													<option value="11">bacteria and phage</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="cell4" colspan="2">The DNA pathogen such as bacteria, ASFV and Poxvirus can use this model to strain typing. This approach can not only analyze the complete genome of the isolate, but also can process the draft genome of the isolate. Each genome of the isolate must be in a single fasta file. Please use a .zip or .gz format file to package the multiple fasta files.</td>
+										</tr>
+										<tr>
+											<td style="text-align:center;">
+												<input class="cell3" type="submit" value="typing"/>
+											</td>
+											<td style="text-align:center;">
+												<input class="cell3" type="reset" value="cancel"/>
+											</td>
+										</tr>
+									</table>
+								</form>
+							</div>
+						</div>
+					</section>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="font-size:10px; text-align:justify;border:2px solid #eeeeee;">The strain typing approach can not only find the most identical strains to your target isolate, but also can cluster differential lineages in the same pathogen. In order to perform the analysis correctly, please ensure that the RNA virus genomes file to be uploaded does not exceed 40Mb and the DNA pathogen genomes file to be uploaded does not exceed 65Mb.</td>
+				</tr>
+			</table>
+			</div>
+		</section>
+		<script type="application/javascript" >
+			window.onload=function () {
+				let as=document.getElementsByClassName('model-header')[0].getElementsByTagName('a');
+				let contents=document.getElementsByClassName("model-menu");
+				for (let i=0;i<as.length;i++){
+					let a=as[i];
+					a.id=i;
+					a.onclick=function () {
+						for(let j=0;j<as.length;j++){
+							as[j].className="";
+							contents[j].style.display="none";
+						}
+						this.className='current';
+						contents[this.id].style.display='block';
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
