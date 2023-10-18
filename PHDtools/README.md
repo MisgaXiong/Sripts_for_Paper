@@ -2,4 +2,4 @@
 ![](https://img.shields.io/badge/Platform-Linux|Ubuntu(16.04~22.04)-green)
 ![](https://img.shields.io/badge/Install_with-|github-orange)
 
-** The PHDtools platform is a graphical user interface (GUI) based intranet online platform. Computers in the same LAN could access this platfrom by visiting the intranet IP address of the work station which installed with PHDtools. **
+**The PHDtools platform is a graphical user interface (GUI) based intranet online platform. Computers in the same LAN could access this platfrom by visiting the intranet IP address of the work station which installed with PHDtools.**
