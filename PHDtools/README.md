@@ -16,6 +16,7 @@
 
 ## Introduction
 PHDtools is an intranet online platform that can process the mNGS/NGS data of pathogen genomes. This platform is helpful for the labs and the frontliner workers who have limited background in bioinformatics. Briefly, PHDtools have a total of 15 functions.
+
 Core functions:
 ```
 1. Pathogen X Identification (mNGS data analysis)
