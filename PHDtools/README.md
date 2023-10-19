@@ -15,7 +15,7 @@
 - [Citation](#citation)
 
 ## Introduction
-**PHDtools is an intranet online platform that can process the mNGS/NGS data of pathogen genomes. This platform is helpful for the labs and the frontliner workers who have limited background in bioinformatics. Briefly, PHDtools have a total of 15 functions.**
+**PHDtools is an intranet online platform that can process the mNGS/NGS data of pathogen genomes. This platform is helpful for the labs and the frontliner workers who have limited background in bioinformatics. Briefly, PHDtools have a total of 15 functions described as follows.**
 
 Core functions:
 ```
@@ -35,7 +35,38 @@ Other functions:
 6. Evaluation of Sequencing Quality
 7. Phylegenetic Strain Typing
 8. Genome Annotation
-9 Identification of Conserved Regions of the Pathogen
+9. Identification of Conserved Regions of the Pathogen
 10. PCR-primers Mapping
 ```
 
+## Installation
+**The PHDtools platform was installed and tested successfully on Ubuntu 16.04/18.04/20.04/22.04 LTS systems. This platform relies on the LAMP (Linux/Apache/MySQL/PHP/Perl) based Web sever. The essential softwares are recommended to be installed by the follows description.**
+
+- __First: Install the Apache software__
+
+```bash
+#install apache2
+$sudo apt-get install apache2
+
+#start apache2 server
+$sudo /etc/init.d/apache2 start
+```
+
+Check Apache server by visiting http://127.0.0.1/index.html
+
+- __Second: Install the MySQL software__
+
+```bash
+#install MySQL
+$sudo apt-get install mysql-server
+$sudo apt-get install mysql-client
+$sudo apt-get install libmysqlclient-dev
+```
+
+- __Third: Install the PHP software__
+
+```bash
+$sudo apt-get install software-properties-common
+$sudo add-apt-repository ppa:ondrej/php && sudo apt-get update
+$sudo apt-get -y install php7.2
+```
