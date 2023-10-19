@@ -4,7 +4,12 @@
 
 **The PHDtools platform is a graphical user interface (GUI) based intranet online platform. Computers in the same LAN could access this platfrom by visiting the intranet IP address of the work station which installed with PHDtools.**
 
-![image](./Sripts_for_Paper/tree/master/PHDtools/html/picture/PHDtools-home.png)
+  ____  _   _ ____  _              _     
+ |  _ \| | | |  _ \| |_ ___   ___ | |___ 
+ | |_) | |_| | | | | __/ _ \ / _ \| / __|
+ |  __/|  _  | |_| | || (_) | (_) | \__ \
+ |_|   |_| |_|____/ \__\___/ \___/|_|___/
+                                         
 
 ## Contents
 
@@ -80,7 +85,36 @@ Check PHP by visiting http://127.0.0.1/index.php
 #download all codes from current github page
 $sudo mv -f html/ /var/www/
 $sudo mv -f other_scripts/ /var/www/
-$mkdir ~/Web
+#mkdir a set of folders as follows to establish the essential paths of PHDtools in your ~/ or home folders
+Web-Server
+├── AlignPrimers
+├── Basic-operation
+│   ├── align-seq
+│   ├── extract-seq
+│   ├── reverse-complen
+│   └── translate-seq
+├── Compare-genome
+├── ConserveSeq
+├── Genome-annotation
+├── Genome-assemble
+├── Microbiome
+├── MinorAllele
+├── Primer-design
+├── Result-store
+│   ├── AlignPrimers
+│   ├── Compare-genome
+│   ├── ConserveSeq
+│   ├── Genome-annotation
+│   ├── Genome-assemble
+│   ├── Microbiome
+│   ├── MinorAllele
+│   ├── Primer-design
+│   ├── Strain-typing
+│   ├── Uniq-mut
+│   └── WGS-quality
+├── Strain-typing
+├── Uniq-mut
+└── WGS-quality
 ```
 
 Edit the path within the scripts from /var/www/html/ and /var/www/other_scripts/
@@ -105,3 +139,6 @@ The dependencies are recommended to be installed with __[Bioconda](https://bioco
 
 ## License
 **Academic use is free of charge. For commerical use, please contact hpwei@wh.iov.cn, yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn for permission.**
+
+## Citation
+**Our article is in preparation, https://github.com/MisgaXiong/Sripts_for_Paper/edit/master/PHDtools can be cited before our paper is published。**
