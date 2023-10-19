@@ -4,12 +4,13 @@
 
 **The PHDtools platform is a graphical user interface (GUI) based intranet online platform. Computers in the same LAN could access this platfrom by visiting the intranet IP address of the work station which installed with PHDtools.**
 
+```
   ____  _   _ ____  _              _     
  |  _ \| | | |  _ \| |_ ___   ___ | |___ 
  | |_) | |_| | | | | __/ _ \ / _ \| / __|
  |  __/|  _  | |_| | || (_) | (_) | \__ \
  |_|   |_| |_|____/ \__\___/ \___/|_|___/
-                                         
+```                                      
 
 ## Contents
 
