@@ -11,6 +11,7 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Required dependencies](#required-dependencies)
+- [Usage](#usage)
 - [License](#license)
 - [Citation](#citation)
 
@@ -29,8 +30,8 @@ Other functions:
 ```
 1. Reverse or Complement of the Sequences
 2. Translate Nucleotide Sequences to Amino Acide Sequences
-3. Extact the target sequences
-4. Translate Nucleotide Sequences to Amino Acid Sequences
+3. Extact the Target Sequences
+4. Sequences Alignment
 5. Genome Annotation
 6. Evaluation of Sequencing Quality
 7. Phylegenetic Strain Typing
@@ -70,3 +71,37 @@ $sudo apt-get install software-properties-common
 $sudo add-apt-repository ppa:ondrej/php && sudo apt-get update
 $sudo apt-get -y install php7.2
 ```
+
+Check PHP by visiting http://127.0.0.1/index.php
+
+- __Fourth: Install the PHDtools__
+
+```bash
+#download all codes from current github page
+$sudo mv -f html/ /var/www/
+$sudo mv -f other_scripts/ /var/www/
+$mkdir ~/Web
+```
+
+Edit the path within the scripts from /var/www/html/ and /var/www/other_scripts/
+Edit the path to required softwares within the scripts /var/www/html/ and /var/www/other_scripts/
+
+## Required dependencies
+The dependencies are recommended to be installed with __[Bioconda](https://bioconda.github.io/index.html)__
+- [Perl](http://www.perl.org/get.html)
+- [perl-bioperl](http://metacpan.org/pod/BioPerl)
+- [fastq_screen](https://www.bioinformatics.babraham.ac.uk/projects/download.html#fastqscreen)
+- [bowtie2](https://github.com/BenLangmead/bowtie2)
+- [trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
+- [NCBI-blast+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
+- [megahit](https://github.com/voutcn/megahit)
+- [samtools](https://github.com/samtools/samtools)
+- [MAFFT](https://mafft.cbrc.jp/alignment/software/)
+- [Prokka](https://github.com/tseemann/prokka)
+- [prodigal](https://github.com/hyattpd/Prodigal)
+
+## Usage
+**All the computers in the same LAN can visit the PHDtools platform via intranet IP address of the work station installed with PHDtools. Click into the page of corresponding function and upload the raw data to PHDtools. The results will be release later.**
+
+## License
+**Academic use is free of charge. For commerical use, please contact hpwei@wh.iov.cn, yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn for permission.**
