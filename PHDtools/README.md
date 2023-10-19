@@ -15,7 +15,7 @@
 - [Citation](#citation)
 
 ## Introduction
-PHDtools is an intranet online platform that can process the mNGS/NGS data of pathogen genomes. This platform is helpful for the labs and the frontliner workers who have limited background in bioinformatics. Briefly, PHDtools have a total of 15 functions.
+**PHDtools is an intranet online platform that can process the mNGS/NGS data of pathogen genomes. This platform is helpful for the labs and the frontliner workers who have limited background in bioinformatics. Briefly, PHDtools have a total of 15 functions.**
 
 Core functions:
 ```
@@ -25,3 +25,18 @@ Core functions:
 4. Inter-host Variation Identification (Identify mutations including SNP and Indel between two isolates)
 5. Lineage-level Variation Identification (Identify common mutations at the lineage-level of the pathogen)
 ```
+Other functions:
+```
+1. Reverse or Complement of the Sequences
+2. Translate Nucleotide Sequences to Amino Acide Sequences
+3. Extact the target sequences
+4. Translate Nucleotide Sequences to Amino Acid Sequences
+5. Genome Annotation
+6. Evaluation of Sequencing Quality
+7. Phylegenetic Strain Typing
+8. Genome Annotation
+9 Identification of Conserved Regions of the Pathogen
+10. PCR-primers Mapping
+10.   
+```
+
