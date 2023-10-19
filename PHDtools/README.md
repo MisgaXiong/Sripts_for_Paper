@@ -37,6 +37,5 @@ Other functions:
 8. Genome Annotation
 9 Identification of Conserved Regions of the Pathogen
 10. PCR-primers Mapping
-10.   
 ```
 
