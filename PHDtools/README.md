@@ -144,4 +144,4 @@ The dependencies are recommended to be installed with __[Bioconda](https://bioco
 **Academic use is free of charge. For commerical use, please contact hpwei@wh.iov.cn, yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn for permission.**
 
 ## Citation
-**Our article is in preparation, https://github.com/MisgaXiong/Sripts_for_Paper/edit/master/PHDtools can be cited before our paper is published。**
+**Our article is in preparation, https://github.com/MisgaXiong/Sripts_for_Paper/edit/master/PHDtools can be cited before our paper is published.**
