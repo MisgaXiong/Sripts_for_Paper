@@ -49,7 +49,7 @@ Other functions:
 ## Installation
 **The PHDtools platform was installed and tested successfully on Ubuntu 16.04/18.04/20.04/22.04 LTS systems. This platform relies on the LAMP (Linux/Apache/MySQL/PHP/Perl) based Web sever. The essential softwares are recommended to be installed by the follows description.**
 
-- __KINDLY REMIND: If you have any trouble in the installation, kindly please contact hpwei@wh.iov.cn, yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn, we will arrange the online zoom meeting to give the assistance for you to complete the installation of PHDtools__
+- __KINDLY REMIND: If you have any trouble in the installation, kindly please contact hpwei@wh.iov.cn, yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn, we will arrange the online assistance for you to complete the installation of PHDtools__
 
 - __First: Install the Apache software__
 
