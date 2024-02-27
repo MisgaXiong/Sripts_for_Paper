@@ -142,4 +142,4 @@ The dependencies are recommended to be installed with __[Bioconda](https://bioco
 **Academic use is free of charge. For commerical use, please contact hpwei@wh.iov.cn, yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn for permission.**
 
 ## Citation
-**Our article is in preparation, https://github.com/MisgaXiong/Sripts_for_Paper/edit/master/PHDtools can be cited before our paper is published.**
+**Xiong D, Zhang X, et al. PHDtools: A platform for pathogen detection and multi-dimensional genetic signatures decoding to realize pathogen genomics data analyses online. Gene. 2024 Feb 24:148306. doi: 10.1016/j.gene.2024.148306.**
