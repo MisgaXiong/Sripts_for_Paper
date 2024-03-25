@@ -139,7 +139,7 @@ The dependencies are recommended to be installed with __[Bioconda](https://bioco
 **All the computers in the same LAN can visit the PHDtools platform via intranet IP address of the work station installed with PHDtools. Click into the page of corresponding function and upload the raw data to PHDtools. The results will be release later.**
 
 ## License
-**Academic use is free of charge. For commerical use, please contact hpwei@wh.iov.cn, yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn for permission.**
+**Academic use is free of charge. For commerical use, please contact yujp@wh.iov.cn and xiongdongyan18@mails.ucas.ac.cn for permission.**
 
 ## Citation
 **Xiong D, Zhang X, et al. PHDtools: A platform for pathogen detection and multi-dimensional genetic signatures decoding to realize pathogen genomics data analyses online. Gene. 2024 Feb 24:148306. doi: 10.1016/j.gene.2024.148306.**
