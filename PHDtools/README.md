@@ -84,8 +84,6 @@ Check PHP by visiting http://127.0.0.1/index.php
 
 ```bash
 #download all codes from current github page
-$sudo mv -f html/ /var/www/
-$sudo mv -f other_scripts/ /var/www/
 #mkdir a set of folders as follows to establish the essential paths of PHDtools in your ~/ or home folders
 Web-Server
 ├── AlignPrimers
@@ -118,8 +116,7 @@ Web-Server
 └── WGS-quality
 ```
 
-Edit the path within the scripts from /var/www/html/ and /var/www/other_scripts/
-Edit the path to required softwares within the scripts /var/www/html/ and /var/www/other_scripts/
+Edit the path within the scripts from /var/www/html/
 
 ## Required dependencies
 The dependencies are recommended to be installed with __[Bioconda](https://bioconda.github.io/index.html)__
